@@ -1,6 +1,8 @@
 Compile on MacOs:    
-g++ *.cpp    
+g++ \*.cpp    
 Run on MacOs:   
-./*.out
+./\*.out
 
 using Clion to run just for main.cpp
+
+git push -u origin main

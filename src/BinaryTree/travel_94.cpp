@@ -65,12 +65,12 @@ void PreOrderTravel2(TreeNode *root){
         while(ptr != nullptr) {
             cout<<" "<<ptr->val;            // pre-order root和left直接遍历不需要缓存
             if (ptr->right != nullptr) {    // 只需要将right缓存入栈
-                s.push(ptr);       // 也可以直接存储 ptr->right，下面取的时候用 ptr
+                s.push(ptr->right);       // 也可以直接存储 ptr->right，下面取的时候用 ptr
             }
             ptr = ptr->left;
         }
         if (!s.empty()) {
-            ptr = s.top()->right;
+            ptr = s.top();
             s.pop();
         }
     }
